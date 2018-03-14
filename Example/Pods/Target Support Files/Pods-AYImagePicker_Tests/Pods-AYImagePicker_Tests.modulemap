@@ -1,0 +1,6 @@
+framework module Pods_AYImagePicker_Tests {
+  umbrella header "Pods-AYImagePicker_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

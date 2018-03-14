@@ -1,0 +1,6 @@
+framework module AYImagePicker {
+  umbrella header "AYImagePicker-umbrella.h"
+
+  export *
+  module * { export * }
+}

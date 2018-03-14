@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38CF296B75890C26387F72516BA19788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4458763D2E04D12FB44AB8B4614BBD48 /* Pods-AYImagePicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13600ECFFEBF7BE199F3E44B99F6075D /* Pods-AYImagePicker_Example-dummy.m */; };
+		728668A562585889E5BA1B71C40788B4 /* AYImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C8232E435B3D74465333514BA1111BB /* AYImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87351A807B12332847285FD232AB5B43 /* Pods-AYImagePicker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C82CE0106C30A2C92B1610E14BF2950 /* Pods-AYImagePicker_Tests-dummy.m */; };
+		98B95466112E57DB58FCF74AFDB9618C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A5F858B7122B06BE55C7859BD07F0FE1 /* AYImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3A00CC714241A5E01B00558791662 /* AYImagePicker.swift */; };
+		AA3133895D62CBAD211A09DA00AAA2E6 /* AYImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA749366C57FF39F414FB1CA9048E47 /* AYImagePicker-dummy.m */; };
+		BD22F262A7CF5F1CE2D4B5A579F7C968 /* Pods-AYImagePicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC2CF9BC7D6AFD4C34941EE0B9EAB24 /* Pods-AYImagePicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDCEA5622059684E00A2EAB5 /* YPImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCEA5612059683F00A2EAB5 /* YPImagePicker.framework */; };
+		CB887BECD83A7D81003C5E2EDD81A2E2 /* Pods-AYImagePicker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E1EF5B30B23CAE8AA509F2C24C947B /* Pods-AYImagePicker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA77E9E22C6A3D72413E9763440719A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09E425ADB0A8194A34597C0CE3D9FD36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 156C97BA766BA1DD7F598F1020664471;
+			remoteInfo = AYImagePicker;
+		};
+		BDCEA5602059683F00A2EAB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDCEA55B2059683F00A2EAB5 /* YPImagePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52412A931CA6114A0073C4BE;
+			remoteInfo = YPImagePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0717737BC3838ED536C1B0537676F337 /* Pods-AYImagePicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AYImagePicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		0C82CE0106C30A2C92B1610E14BF2950 /* Pods-AYImagePicker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AYImagePicker_Tests-dummy.m"; sourceTree = "<group>"; };
+		13600ECFFEBF7BE199F3E44B99F6075D /* Pods-AYImagePicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AYImagePicker_Example-dummy.m"; sourceTree = "<group>"; };
+		2392B1ABC182778208E45B4E8BC3596C /* AYImagePicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AYImagePicker.xcconfig; sourceTree = "<group>"; };
+		303FDE92770706583B8B6C6CFA823A43 /* Pods-AYImagePicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYImagePicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		32E47F27BEB5A694758600A3420B63B9 /* Pods_AYImagePicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYImagePicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39C941C66191E180DEE25E4E14604355 /* AYImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AYImagePicker.modulemap; sourceTree = "<group>"; };
+		3EA749366C57FF39F414FB1CA9048E47 /* AYImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AYImagePicker-dummy.m"; sourceTree = "<group>"; };
+		43E1EF5B30B23CAE8AA509F2C24C947B /* Pods-AYImagePicker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AYImagePicker_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4A1945C354292CDE7FE872E19F5913CE /* Pods-AYImagePicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AYImagePicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56117AE3480CA1183AF29F855146BFAD /* Pods-AYImagePicker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYImagePicker_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		57B473DDE43FEFC644EE1C279FC02971 /* AYImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AYImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		69A3A00CC714241A5E01B00558791662 /* AYImagePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AYImagePicker.swift; path = AYImagePicker/Classes/AYImagePicker.swift; sourceTree = "<group>"; };
+		6C8232E435B3D74465333514BA1111BB /* AYImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AYImagePicker-umbrella.h"; sourceTree = "<group>"; };
+		6CE781CDD82CAF0BA1F7AB822383B7E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		710C0882A6E5E8AC0BC62F36B4EB4807 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC2CF9BC7D6AFD4C34941EE0B9EAB24 /* Pods-AYImagePicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AYImagePicker_Example-umbrella.h"; sourceTree = "<group>"; };
+		8CDED5F8ABAAB1F5785446F5E335D452 /* Pods-AYImagePicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AYImagePicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F7E2D8F691D2DF476A7C13514CC0A4A /* Pods-AYImagePicker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AYImagePicker_Tests-resources.sh"; sourceTree = "<group>"; };
+		B239750FB8E482ACD1DE4835AB513A16 /* Pods-AYImagePicker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYImagePicker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B502BF8A61EBE43BE3AE039A09A3E032 /* Pods_AYImagePicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AYImagePicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B828E3675A4D34081D3B4909594AFC33 /* Pods-AYImagePicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AYImagePicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BDCEA55B2059683F00A2EAB5 /* YPImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YPImagePicker.xcodeproj; path = "../YPImagePicker-2.7.2/YPImagePicker.xcodeproj"; sourceTree = "<group>"; };
+		C64ED9A4113AE1F16EEE8992A82C6269 /* Pods-AYImagePicker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AYImagePicker_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CBEBD52CF9E0BD81B19A3DD5BA3E6E48 /* AYImagePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AYImagePicker-prefix.pch"; sourceTree = "<group>"; };
+		DBFDC3F4770ABA185B64E6EC5DB42F1E /* Pods-AYImagePicker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AYImagePicker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DFFAB0F2478AF1CD06B5A8E42EE83D1E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E15AA15A117593B79D62E5769D47D3F8 /* Pods-AYImagePicker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AYImagePicker_Tests.modulemap"; sourceTree = "<group>"; };
+		E8117A7EB7A31766826532CE3DFFB7CB /* Pods-AYImagePicker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AYImagePicker_Example-resources.sh"; sourceTree = "<group>"; };
+		F0CDB88EABBC89328F0DFCFA473D1169 /* Pods-AYImagePicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AYImagePicker_Example.modulemap"; sourceTree = "<group>"; };
+		FE4F1E3368A8A143CEE77DCB82969FE1 /* Pods-AYImagePicker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AYImagePicker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E7413B8E60F471559AABDABD3A94B8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38CF296B75890C26387F72516BA19788 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE4736700CD679F9C9DE60A7E45F573 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B95466112E57DB58FCF74AFDB9618C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE957AF957E8741E94B64DFF5C97A5E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCEA5622059684E00A2EAB5 /* YPImagePicker.framework in Frameworks */,
+				FA77E9E22C6A3D72413E9763440719A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2125045D76BF7F7D0492EB836CE414C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39C941C66191E180DEE25E4E14604355 /* AYImagePicker.modulemap */,
+				2392B1ABC182778208E45B4E8BC3596C /* AYImagePicker.xcconfig */,
+				3EA749366C57FF39F414FB1CA9048E47 /* AYImagePicker-dummy.m */,
+				CBEBD52CF9E0BD81B19A3DD5BA3E6E48 /* AYImagePicker-prefix.pch */,
+				6C8232E435B3D74465333514BA1111BB /* AYImagePicker-umbrella.h */,
+				710C0882A6E5E8AC0BC62F36B4EB4807 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AYImagePicker";
+			sourceTree = "<group>";
+		};
+		3B47F3BE53512D5A0EEE56468DB3F961 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8D8DA190EC99EB59D925CE167E1A8B9 /* Pods-AYImagePicker_Example */,
+				7EC487B5975DB6DB37DB7549808E9703 /* Pods-AYImagePicker_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D1A5AF8A2568595D6CC8D84E82FB5E80 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				E737FA36E43EEECEBEF88D0C20763093 /* Products */,
+				3B47F3BE53512D5A0EEE56468DB3F961 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EC487B5975DB6DB37DB7549808E9703 /* Pods-AYImagePicker_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DFFAB0F2478AF1CD06B5A8E42EE83D1E /* Info.plist */,
+				E15AA15A117593B79D62E5769D47D3F8 /* Pods-AYImagePicker_Tests.modulemap */,
+				FE4F1E3368A8A143CEE77DCB82969FE1 /* Pods-AYImagePicker_Tests-acknowledgements.markdown */,
+				DBFDC3F4770ABA185B64E6EC5DB42F1E /* Pods-AYImagePicker_Tests-acknowledgements.plist */,
+				0C82CE0106C30A2C92B1610E14BF2950 /* Pods-AYImagePicker_Tests-dummy.m */,
+				C64ED9A4113AE1F16EEE8992A82C6269 /* Pods-AYImagePicker_Tests-frameworks.sh */,
+				9F7E2D8F691D2DF476A7C13514CC0A4A /* Pods-AYImagePicker_Tests-resources.sh */,
+				43E1EF5B30B23CAE8AA509F2C24C947B /* Pods-AYImagePicker_Tests-umbrella.h */,
+				B239750FB8E482ACD1DE4835AB513A16 /* Pods-AYImagePicker_Tests.debug.xcconfig */,
+				56117AE3480CA1183AF29F855146BFAD /* Pods-AYImagePicker_Tests.release.xcconfig */,
+			);
+			name = "Pods-AYImagePicker_Tests";
+			path = "Target Support Files/Pods-AYImagePicker_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDCEA55B2059683F00A2EAB5 /* YPImagePicker.xcodeproj */,
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDCEA55C2059683F00A2EAB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDCEA5612059683F00A2EAB5 /* YPImagePicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1A5AF8A2568595D6CC8D84E82FB5E80 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F68EECDAC38FCA5643F9D74C61D9007F /* AYImagePicker */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E737FA36E43EEECEBEF88D0C20763093 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57B473DDE43FEFC644EE1C279FC02971 /* AYImagePicker.framework */,
+				B502BF8A61EBE43BE3AE039A09A3E032 /* Pods_AYImagePicker_Example.framework */,
+				32E47F27BEB5A694758600A3420B63B9 /* Pods_AYImagePicker_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8D8DA190EC99EB59D925CE167E1A8B9 /* Pods-AYImagePicker_Example */ = {
+			isa = PBXGroup;
+			children = (
+				6CE781CDD82CAF0BA1F7AB822383B7E0 /* Info.plist */,
+				F0CDB88EABBC89328F0DFCFA473D1169 /* Pods-AYImagePicker_Example.modulemap */,
+				4A1945C354292CDE7FE872E19F5913CE /* Pods-AYImagePicker_Example-acknowledgements.markdown */,
+				8CDED5F8ABAAB1F5785446F5E335D452 /* Pods-AYImagePicker_Example-acknowledgements.plist */,
+				13600ECFFEBF7BE199F3E44B99F6075D /* Pods-AYImagePicker_Example-dummy.m */,
+				0717737BC3838ED536C1B0537676F337 /* Pods-AYImagePicker_Example-frameworks.sh */,
+				E8117A7EB7A31766826532CE3DFFB7CB /* Pods-AYImagePicker_Example-resources.sh */,
+				7BC2CF9BC7D6AFD4C34941EE0B9EAB24 /* Pods-AYImagePicker_Example-umbrella.h */,
+				B828E3675A4D34081D3B4909594AFC33 /* Pods-AYImagePicker_Example.debug.xcconfig */,
+				303FDE92770706583B8B6C6CFA823A43 /* Pods-AYImagePicker_Example.release.xcconfig */,
+			);
+			name = "Pods-AYImagePicker_Example";
+			path = "Target Support Files/Pods-AYImagePicker_Example";
+			sourceTree = "<group>";
+		};
+		F68EECDAC38FCA5643F9D74C61D9007F /* AYImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				69A3A00CC714241A5E01B00558791662 /* AYImagePicker.swift */,
+				2125045D76BF7F7D0492EB836CE414C0 /* Support Files */,
+			);
+			name = AYImagePicker;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		57F40813BC1BA915CF808FBE6CD5DEC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD22F262A7CF5F1CE2D4B5A579F7C968 /* Pods-AYImagePicker_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97FAF3FA4BF6243FFF7C7D8FEDC3C65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				728668A562585889E5BA1B71C40788B4 /* AYImagePicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5ED654B29FF2879E1F0FC415F2A90F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB887BECD83A7D81003C5E2EDD81A2E2 /* Pods-AYImagePicker_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		156C97BA766BA1DD7F598F1020664471 /* AYImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4782F4B0657A7C40A7908DCF3E0A3595 /* Build configuration list for PBXNativeTarget "AYImagePicker" */;
+			buildPhases = (
+				A2F26578F86CDACCBF47354A72EF789C /* Sources */,
+				DE957AF957E8741E94B64DFF5C97A5E4 /* Frameworks */,
+				E97FAF3FA4BF6243FFF7C7D8FEDC3C65 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AYImagePicker;
+			productName = AYImagePicker;
+			productReference = 57B473DDE43FEFC644EE1C279FC02971 /* AYImagePicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F8F86346316BA3BE23835DA4C887A64 /* Pods-AYImagePicker_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82E71E383CA14AA4C4B9C86C40D8620E /* Build configuration list for PBXNativeTarget "Pods-AYImagePicker_Tests" */;
+			buildPhases = (
+				D72C0A392232030B0B4A106B02FC4C88 /* Sources */,
+				5E7413B8E60F471559AABDABD3A94B8D /* Frameworks */,
+				ED5ED654B29FF2879E1F0FC415F2A90F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AYImagePicker_Tests";
+			productName = "Pods-AYImagePicker_Tests";
+			productReference = 32E47F27BEB5A694758600A3420B63B9 /* Pods_AYImagePicker_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E60D4732BAB7D3D741F043578C99BC06 /* Pods-AYImagePicker_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F70DBBA7B722BE8A6CA48EA39F69FBD /* Build configuration list for PBXNativeTarget "Pods-AYImagePicker_Example" */;
+			buildPhases = (
+				57DC5785B320A782026D75774A03D9B9 /* Sources */,
+				DDE4736700CD679F9C9DE60A7E45F573 /* Frameworks */,
+				57F40813BC1BA915CF808FBE6CD5DEC0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				460A6AAD712CB0669CD93AB8999C96D0 /* PBXTargetDependency */,
+			);
+			name = "Pods-AYImagePicker_Example";
+			productName = "Pods-AYImagePicker_Example";
+			productReference = B502BF8A61EBE43BE3AE039A09A3E032 /* Pods_AYImagePicker_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E737FA36E43EEECEBEF88D0C20763093 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BDCEA55C2059683F00A2EAB5 /* Products */;
+					ProjectRef = BDCEA55B2059683F00A2EAB5 /* YPImagePicker.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				156C97BA766BA1DD7F598F1020664471 /* AYImagePicker */,
+				E60D4732BAB7D3D741F043578C99BC06 /* Pods-AYImagePicker_Example */,
+				6F8F86346316BA3BE23835DA4C887A64 /* Pods-AYImagePicker_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BDCEA5612059683F00A2EAB5 /* YPImagePicker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = YPImagePicker.framework;
+			remoteRef = BDCEA5602059683F00A2EAB5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57DC5785B320A782026D75774A03D9B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4458763D2E04D12FB44AB8B4614BBD48 /* Pods-AYImagePicker_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2F26578F86CDACCBF47354A72EF789C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA3133895D62CBAD211A09DA00AAA2E6 /* AYImagePicker-dummy.m in Sources */,
+				A5F858B7122B06BE55C7859BD07F0FE1 /* AYImagePicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D72C0A392232030B0B4A106B02FC4C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87351A807B12332847285FD232AB5B43 /* Pods-AYImagePicker_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		460A6AAD712CB0669CD93AB8999C96D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AYImagePicker;
+			target = 156C97BA766BA1DD7F598F1020664471 /* AYImagePicker */;
+			targetProxy = 09E425ADB0A8194A34597C0CE3D9FD36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7s armv7 arm64";
+			};
+			name = Release;
+		};
+		3B44679F57A6D70C0893CE6062E2A8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 303FDE92770706583B8B6C6CFA823A43 /* Pods-AYImagePicker_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AYImagePicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AYImagePicker_Example/Pods-AYImagePicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AYImagePicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B7712985665953FFD1C57B00C220826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56117AE3480CA1183AF29F855146BFAD /* Pods-AYImagePicker_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AYImagePicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AYImagePicker_Tests/Pods-AYImagePicker_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AYImagePicker_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6D16EA085FBD00E200416098A672CDFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2392B1ABC182778208E45B4E8BC3596C /* AYImagePicker.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $PODS_CONFIGURATION_BUILD_DIR/;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AYImagePicker/AYImagePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AYImagePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AYImagePicker/AYImagePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AYImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B747233FCD2991F98FF64BC960CB0B4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B239750FB8E482ACD1DE4835AB513A16 /* Pods-AYImagePicker_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AYImagePicker_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AYImagePicker_Tests/Pods-AYImagePicker_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AYImagePicker_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC088DEAB34713D1B12687116BB59C7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B828E3675A4D34081D3B4909594AFC33 /* Pods-AYImagePicker_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AYImagePicker_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AYImagePicker_Example/Pods-AYImagePicker_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AYImagePicker_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7AE6233023BE4AC28B2DB4F9A68320D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2392B1ABC182778208E45B4E8BC3596C /* AYImagePicker.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $PODS_CONFIGURATION_BUILD_DIR/;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AYImagePicker/AYImagePicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AYImagePicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AYImagePicker/AYImagePicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AYImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EED546DBB23FC32035C9BDC4E22B30BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				VALID_ARCHS = "armv7s armv7 arm64";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F70DBBA7B722BE8A6CA48EA39F69FBD /* Build configuration list for PBXNativeTarget "Pods-AYImagePicker_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC088DEAB34713D1B12687116BB59C7C /* Debug */,
+				3B44679F57A6D70C0893CE6062E2A8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED546DBB23FC32035C9BDC4E22B30BD /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4782F4B0657A7C40A7908DCF3E0A3595 /* Build configuration list for PBXNativeTarget "AYImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7AE6233023BE4AC28B2DB4F9A68320D /* Debug */,
+				6D16EA085FBD00E200416098A672CDFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82E71E383CA14AA4C4B9C86C40D8620E /* Build configuration list for PBXNativeTarget "Pods-AYImagePicker_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B747233FCD2991F98FF64BC960CB0B4F /* Debug */,
+				3B7712985665953FFD1C57B00C220826 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
