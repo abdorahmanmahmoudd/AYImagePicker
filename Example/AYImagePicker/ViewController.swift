@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AYImagePicker
+//import AYImagePicker
 
 class ViewController: UIViewController {
 
@@ -25,10 +25,10 @@ class ViewController: UIViewController {
 
     @IBAction func btnPickClicked(_ sender: UIButton) {
         
-        let cam = AYImagePicker()
-        if let picker = cam.instance{
-            self.present(picker, animated: true, completion: nil)
-        }
+//        let cam = AYImagePicker()
+//        if let picker = cam.instance{
+//            self.present(picker, animated: true, completion: nil)
+//        }
     }
 }
 
