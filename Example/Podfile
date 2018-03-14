@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AYImagePicker_Example' do
+  pod 'AYImagePicker', :path => '../'
+
+  target 'AYImagePicker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
