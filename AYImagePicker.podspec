@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'AYImagePicker'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AYImagePicker.'
+  s.summary          = 'This is a component include camera, library and video recoding Instagram-like customized by me.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,8 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      =
+'This is Instagram like camera component originally design by ytakzk and enhanced by YP, I am just customizing it and enhance some features.'
 
   s.homepage         = 'https://github.com/abdorahmanmahmoudd/AYImagePicker'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -28,9 +27,11 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/abdorahmanmahmoudd/AYImagePicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'AYImagePicker/Classes/**/*'
+  s.vendored_frameworks = 'Example/YPImagePicker-2.7.2/4.0.3/Products/Library/Frameworks/YPImagePicker.framework', 'Example/YPImagePicker-2.7.2/Stevia-4.1.0/Carthage/Build/iOS/Stevia.framework'
+  s.source_files = 'AYImagePicker/Classes/**/*', 'Example/**/*.{h,m,swift}', 'Example/YPImagePicker-2.7.2/Source/*.h'
+  s.public_header_files = 'Example/YPImagePicker-2.7.2/Source/*.h'
   
   # s.resource_bundles = {
   #   'AYImagePicker' => ['AYImagePicker/Assets/*.png']
