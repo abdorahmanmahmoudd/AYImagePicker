@@ -13,16 +13,6 @@ import AVFoundation
 
 class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecognizerDelegate {
     
-    let playerLayer = AVPlayerLayer()
-    var playerGravity : AVLayerVideoGravity?{
-        didSet{
-            if let videoGravity = playerGravity{
-                playerLayer.videoGravity = videoGravity
-            }else{
-                playerLayer.videoGravity = .resizeAspectFill
-            }
-        }
-    }
     var isShown = true
     let grid = YPGridView()
     let curtain = UIView()
@@ -120,12 +110,12 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
             squareCropButton.Bottom == cropView!.Bottom - 15
         }
         
-        layer.insertSublayer(playerLayer, below: spinnerView.layer)
+//        layer.insertSublayer(playerLayer, below: spinnerView.layer)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        playerLayer.frame = frame
+//        playerLayer.frame = frame
     }
     
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith
@@ -133,9 +123,9 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
         return true
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-         return !(touch.view is UIButton)
-    }
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+//         return !(touch.view is UIButton)
+//    }
     
     @objc
     func handleTouchDown(sender: UILongPressGestureRecognizer) {
@@ -161,7 +151,7 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
     }
     
     func ypImageCropViewscrollViewDidZoom() {
-        if isShown && !isVideoMode {
+        if isShown && !isVideoMode  { 
             UIView.animate(withDuration: 0.1) {
                 self.grid.alpha = 1
             }
@@ -176,8 +166,8 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
     
     @objc
     func singleTap() {
-        if isVideoMode {
-            playerLayer.player?.togglePlayPause()
-        }
+//        if isVideoMode {
+//            playerLayer.player?.togglePlayPause()
+//        }
     }
 }

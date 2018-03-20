@@ -17,7 +17,9 @@ public class AYImagePicker {
 
         var config = YPImagePickerConfiguration()
         config.showsVideoInLibrary = true
-        config.videoGravity = AVLayerVideoGravity.resizeAspect
+        config.onlySquareImagesFromLibrary = false
+        config.onlySquareImagesFromCamera = false
+        config.videoGravity = AVLayerVideoGravity.resizeAspectFill
         config.startOnScreen = .library
         instance = YPImagePicker.init(configuration: config)
 

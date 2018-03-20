@@ -62,7 +62,7 @@ extension YPLibraryView {
     // MARK: - Player
     
     var player: AVPlayer? {
-        return imageCropViewContainer.playerLayer.player
+        return imageCropView.playerLayer.player
     }
     
     func pausePlayer() {
@@ -70,8 +70,8 @@ extension YPLibraryView {
     }
     
     func hidePlayer() {
-        imageCropViewContainer.playerLayer.player?.pause()
-        imageCropViewContainer.playerLayer.isHidden = true
+        imageCropView.playerLayer.player?.pause()
+        imageCropView.playerLayer.isHidden = true
     }
     
     // MARK: - Grid

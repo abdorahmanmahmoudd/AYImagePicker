@@ -21,10 +21,18 @@ extension YPLibraryVC {
         v.refreshCropControl()
     }
     
-    func play(videoItem: AVPlayerItem) {
+    
+    func play(videoItem: AVPlayerItem, size: CGSize) {
+        
         let player = AVPlayer(playerItem: videoItem)
-        v.imageCropViewContainer.playerLayer.player = player
-        v.imageCropViewContainer.playerLayer.isHidden = false
+        if configuration.videoGravity == .resizeAspectFill{
+            v.imageCropView.playerLayer.frame.size = UIScreen.main.bounds.size
+            
+        }else{
+            v.imageCropView.playerLayer.frame.size = v.imageCropView.frame.size
+        }
+        v.imageCropView.playerLayer.player = player
+        v.imageCropView.playerLayer.isHidden = false
         v.imageCropViewContainer.spinnerView.alpha = 0
         player.play()
     }
@@ -45,7 +53,21 @@ extension YPLibraryVC {
         mediaManager.imageManager?.fetchPlayerItem(for: asset) { playerItem in
             // Prevent long videos to come after user selected another in the meantime.
             if self.latestImageTapped == asset.localIdentifier {
-                self.play(videoItem: playerItem)
+                var videoSize = CGSize()
+                let options: PHVideoRequestOptions = PHVideoRequestOptions()
+                options.version = .original
+                PHImageManager.default().requestAVAsset(forVideo: asset, options: options, resultHandler: { (asset, audioMix, info) in
+                    if let urlAsset = asset as? AVURLAsset {
+                        let localVideoUrl = urlAsset.url
+                        if let track = AVAsset.init(url: localVideoUrl).tracks(withMediaType: AVMediaType.video).first{
+                        
+                            videoSize = track.naturalSize
+                            DispatchQueue.main.async {
+                                self.play(videoItem: playerItem, size: videoSize)
+                            }
+                        }
+                    }
+                })
             }
         }
     }

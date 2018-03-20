@@ -21,7 +21,7 @@ public class YPLibraryVC: UIViewController, PermissionCheckable {
     var v: YPLibraryView!
     
     internal let panGestureHelper = PanGestureHelper()
-
+    
     // MARK: - Init
     
     public required init(configuration: YPImagePickerConfiguration) {
@@ -51,7 +51,7 @@ public class YPLibraryVC: UIViewController, PermissionCheckable {
         refreshMediaRequest()
         v.imageCropViewContainer.onlySquareImages = configuration.onlySquareImagesFromLibrary
         v.imageCropView.onlySquareImages = configuration.onlySquareImagesFromLibrary
-        v.imageCropViewContainer.playerGravity = configuration.videoGravity
+        v.imageCropView.playerGravity = configuration.videoGravity
     }
     
     // MARK: - View Lifecycle

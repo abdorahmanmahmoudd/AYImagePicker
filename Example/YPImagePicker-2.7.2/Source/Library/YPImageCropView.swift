@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol YPImageCropViewDelegate: class {
     func ypImageCropViewDidLayoutSubviews()
@@ -14,9 +15,59 @@ protocol YPImageCropViewDelegate: class {
     func ypImageCropViewscrollViewDidEndZooming()
 }
 
+class PlayerView: UIView {
+
+    let playerLayer = AVPlayerLayer()
+    var observer: NSKeyValueObservation?
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup() {
+        self.layer.insertSublayer(playerLayer, at: 0)
+        clipsToBounds = true
+        observer = playerLayer.observe(\.videoRect) { [weak self] (player, change) in
+            self?.invalidateIntrinsicContentSize()
+            self?.superview?.layoutIfNeeded()
+        }
+    }
+    
+    deinit {
+        observer = nil
+    }
+
+    override var intrinsicContentSize: CGSize{
+        return CGSize(width: playerLayer.videoRect.size.height, height: playerLayer.videoRect.size.height)
+    }
+}
+
 final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
     
-    var onlySquareImages = false {
+    let playerView: PlayerView = PlayerView.init(frame: CGRect.zero)
+    
+    var playerLayer: AVPlayerLayer {
+        return playerView.playerLayer
+    }
+    
+    var playerGravity : AVLayerVideoGravity?{
+        didSet{
+            if let videoGravity = playerGravity{
+                playerLayer.videoGravity = videoGravity
+            }else{
+                playerLayer.videoGravity = .resizeAspectFill
+            }
+        }
+    }
+    
+    var onlySquareImages = false
+    {
         didSet {
             bouncesZoom = false
             bounces = false
@@ -25,7 +76,7 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
     
     var isVideoMode = false {
         didSet {
-            isUserInteractionEnabled = !isVideoMode
+            isUserInteractionEnabled = isVideoMode
         }
     }
     var squaredZoomScale: CGFloat = 1
@@ -52,7 +103,7 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
                 //                imageView.image = image // to present generated video thumb at the background
                 imageView.image = UIImage()
                 imageView.backgroundColor = UIColor.clear
-                contentSize = CGSize.zero
+//                contentSize = CGSize.zero
                 return
             }
             
@@ -121,19 +172,31 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
         alwaysBounceHorizontal = true
         alwaysBounceVertical = true
         isScrollEnabled = true
+        playerView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(playerView)
+        playerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        playerView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        playerView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        playerView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
         myDelegate?.ypImageCropViewDidLayoutSubviews()
+//        playerLayer.frame = uiscree
     }
     
     // MARK: UIScrollViewDelegate Protocol
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        if isVideoMode {
+            return nil
+        }
         return imageView
     }
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        
         myDelegate?.ypImageCropViewscrollViewDidZoom()
         let boundsSize = scrollView.bounds.size
         var contentsFrame = imageView.frame
@@ -155,4 +218,9 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
         myDelegate?.ypImageCropViewscrollViewDidEndZooming()
         contentSize = CGSize(width: imageView.frame.width + 1, height: imageView.frame.height + 1)
     }
+    
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print(scrollView.contentOffset)
+//        print(scrollView.contentSize)
+//    }
 }
