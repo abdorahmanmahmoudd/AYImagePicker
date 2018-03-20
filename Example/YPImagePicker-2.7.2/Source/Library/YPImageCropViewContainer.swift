@@ -50,8 +50,10 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
         if onlySquareImages {
             squareCropButton.isHidden = true
         } else {
-            if isVideoMode {
-                squareCropButton.isHidden = true
+            if isVideoMode, cropView?.playerView.playerLayer.player != nil {
+                
+                squareCropButton.isHidden = false
+                
             } else if let image = cropView?.image {
                 let isShowingSquareImage = image.size.width == image.size.height
                 squareCropButton.isHidden = isShowingSquareImage
@@ -123,9 +125,9 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
         return true
     }
     
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-//         return !(touch.view is UIButton)
-//    }
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+         return !(touch.view is UIButton)
+    }
     
     @objc
     func handleTouchDown(sender: UILongPressGestureRecognizer) {
@@ -166,8 +168,8 @@ class YPImageCropViewContainer: UIView, YPImageCropViewDelegate, UIGestureRecogn
     
     @objc
     func singleTap() {
-//        if isVideoMode {
-//            playerLayer.player?.togglePlayPause()
-//        }
+        if isVideoMode {
+            cropView?.playerView.playerLayer.player?.togglePlayPause()
+        }
     }
 }

@@ -32,7 +32,7 @@ class PlayerView: UIView {
     
     func setup() {
         self.layer.insertSublayer(playerLayer, at: 0)
-        clipsToBounds = true
+//        clipsToBounds = true
         observer = playerLayer.observe(\.videoRect) { [weak self] (player, change) in
             self?.invalidateIntrinsicContentSize()
             self?.superview?.layoutIfNeeded()
@@ -44,7 +44,7 @@ class PlayerView: UIView {
     }
 
     override var intrinsicContentSize: CGSize{
-        return CGSize(width: playerLayer.videoRect.size.height, height: playerLayer.videoRect.size.height)
+        return CGSize(width: playerLayer.videoRect.size.width, height: playerLayer.videoRect.size.height)
     }
 }
 
@@ -74,11 +74,12 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    var isVideoMode = false {
-        didSet {
-            isUserInteractionEnabled = isVideoMode
-        }
-    }
+    var isVideoMode = false
+//    {
+//        didSet {
+//            isUserInteractionEnabled = isVideoMode // this is to prevent zooming in image preview.
+//        }
+//    }
     var squaredZoomScale: CGFloat = 1
     weak var myDelegate: YPImageCropViewDelegate?
     var imageView = UIImageView()
@@ -190,16 +191,21 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
     // MARK: UIScrollViewDelegate Protocol
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         if isVideoMode {
-            return nil
+            return playerView
         }
         return imageView
     }
-    
+
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         
         myDelegate?.ypImageCropViewscrollViewDidZoom()
         let boundsSize = scrollView.bounds.size
-        var contentsFrame = imageView.frame
+        var contentsFrame = CGRect.zero
+        if isVideoMode{
+            contentsFrame = playerView.playerLayer.frame
+        }else{
+             contentsFrame = imageView.frame
+        }
         if contentsFrame.size.width < boundsSize.width {
             contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0
         } else {
@@ -211,12 +217,18 @@ final class YPImageCropView: UIScrollView, UIScrollViewDelegate {
         } else {
             contentsFrame.origin.y = 0.0
         }
-        imageView.frame = contentsFrame
+        if isVideoMode{
+            playerView.playerLayer.frame = contentsFrame
+        }else{
+            imageView.frame = contentsFrame
+        }
     }
     
     func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
         myDelegate?.ypImageCropViewscrollViewDidEndZooming()
-        contentSize = CGSize(width: imageView.frame.width + 1, height: imageView.frame.height + 1)
+        if !isVideoMode{
+            contentSize = CGSize(width: imageView.frame.width + 1, height: imageView.frame.height + 1)
+        }
     }
     
 //    func scrollViewDidScroll(_ scrollView: UIScrollView) {

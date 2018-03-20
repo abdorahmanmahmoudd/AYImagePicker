@@ -22,11 +22,29 @@ extension YPLibraryVC {
     }
     
     
-    func play(videoItem: AVPlayerItem, size: CGSize) {
+    func play(videoItem: AVPlayerItem, size: CGSize,transform txf: CGAffineTransform) {
         
         let player = AVPlayer(playerItem: videoItem)
         if configuration.videoGravity == .resizeAspectFill{
-            v.imageCropView.playerLayer.frame.size = UIScreen.main.bounds.size
+            
+            let videoOrientation : UIInterfaceOrientation?
+            if size.width == txf.tx && size.height == txf.ty{
+                videoOrientation = UIInterfaceOrientation.landscapeRight
+                v.imageCropView.playerLayer.frame.size = CGSize(width: UIScreen.main.bounds.size.height, height: UIScreen.main.bounds.size.width)
+            }
+            else if txf.tx == 0 && txf.ty == 0{
+                videoOrientation = UIInterfaceOrientation.landscapeLeft
+                v.imageCropView.playerLayer.frame.size = CGSize(width: UIScreen.main.bounds.size.height, height: UIScreen.main.bounds.size.width)
+            }
+            else if txf.tx == 0 && txf.ty == size.width{
+                v.imageCropView.playerLayer.frame.size = UIScreen.main.bounds.size
+                videoOrientation = UIInterfaceOrientation.portraitUpsideDown
+            }
+            else{
+                videoOrientation = UIInterfaceOrientation.portrait
+                v.imageCropView.playerLayer.frame.size = UIScreen.main.bounds.size
+            }
+            
             
         }else{
             v.imageCropView.playerLayer.frame.size = v.imageCropView.frame.size
@@ -60,10 +78,9 @@ extension YPLibraryVC {
                     if let urlAsset = asset as? AVURLAsset {
                         let localVideoUrl = urlAsset.url
                         if let track = AVAsset.init(url: localVideoUrl).tracks(withMediaType: AVMediaType.video).first{
-                        
                             videoSize = track.naturalSize
                             DispatchQueue.main.async {
-                                self.play(videoItem: playerItem, size: videoSize)
+                                self.play(videoItem: playerItem, size: videoSize, transform: track.preferredTransform)
                             }
                         }
                     }
