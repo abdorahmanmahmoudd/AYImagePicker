@@ -45,7 +45,6 @@ extension YPLibraryVC {
                 v.imageCropView.playerLayer.frame.size = UIScreen.main.bounds.size
             }
             
-            
         }else{
             v.imageCropView.playerLayer.frame.size = v.imageCropView.frame.size
         }

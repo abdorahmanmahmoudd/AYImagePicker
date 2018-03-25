@@ -16,11 +16,13 @@ public class AYImagePicker {
     public init (){
 
         var config = YPImagePickerConfiguration()
+        config.screens = [.library,.photo,.video]
         config.showsVideoInLibrary = true
         config.onlySquareImagesFromLibrary = false
         config.onlySquareImagesFromCamera = false
         config.videoGravity = AVLayerVideoGravity.resizeAspectFill
         config.startOnScreen = .library
+        config.showsFilters = false
         instance = YPImagePicker.init(configuration: config)
 
     }
